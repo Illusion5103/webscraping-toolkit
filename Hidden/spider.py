@@ -3,8 +3,8 @@ from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 import pandas as pd
 
 #setup
-binary = FirefoxBinary()
-driver = webdriver.Firefox(firefix_binary = binary)
+binary = FirefoxBinary("*FIREFOX BINARY*")
+driver = webdriver.Firefox(firefox_binary = binary)
 url = '' #starting point for spider
 driver.get(url)
 
