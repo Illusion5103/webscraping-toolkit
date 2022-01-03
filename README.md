@@ -1,6 +1,5 @@
 # Web Scraping Toolkit
 
-<<<<<<< HEAD
 Web scraping in Python is a very powerful tool to have as a web developer or security researcher. This repository holds some of the scripts I've written in Python for various tasks related to web scraping.
 
 NOTE: Webscraping can be illegal depending on the nature of the data you are collecting, among other things. I am not responsible for anything you do with these tools, nor is any of this legal advice.
@@ -17,37 +16,7 @@ Note that while the filenames used here are about IP addresses, these scripts wi
 
 Here is the pipeline:
 
-scraper.py
-
-    |
-
-    V
-    
-ips_raw.txt
-    |
-    V
-cleaner.py
-    |
-    V
-ips_cleaned.txt
-    |
-    V
-extractor.py
-    |
-    V
-ips_extracted.txt
-    |
-    V
-locator.py
-    |
-    V
-ips_located.json
-    |
-    V
-formatter.py
-    |
-    V
-ips_formatted.json
+scraper.py -> ips_raw.txt -> cleaner.py -> ips_cleaned.txt -> extractor.py -> ips_extracted.txt -> locator.py -> ips_located.json -> formatter.py -> ips_formatted.json
 
 In other words, scraper.py gets a bunch of IP addresses from a website, and then the next two clean up what scraper.py collected using regex, and then the IPs are geolocated and formatted in a JSON for later use. This same process can be used to get any other form of data from a webpage, you just likely will not need to include the geolocator script in the pipeline.
 
