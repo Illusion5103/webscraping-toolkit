@@ -4,7 +4,7 @@ Web scraping in Python is a very powerful tool to have as a web developer or sec
 
 NOTE: Webscraping can be illegal depending on the nature of the data you are collecting, among other things. I am not responsible for anything you do with these tools, nor is any of this legal advice.
 
-# Clear
+## Clear
 
 This repository is currently split into two folders. 
 
@@ -20,7 +20,7 @@ scraper.py -> ips_raw.txt -> cleaner.py -> ips_cleaned.txt -> extractor.py -> ip
 
 In other words, scraper.py gets a bunch of IP addresses from a website, and then the next two clean up what scraper.py collected using regex, and then the IPs are geolocated and formatted in a JSON for later use. This same process can be used to get any other form of data from a webpage, you just likely will not need to include the geolocator script in the pipeline.
 
-# Hidden
+## Hidden
 
 Hidden services are websites that can only be visited through The Onion Router (Tor). These websites will have a .onion TLD, and one must use the Tor browser to access them. 
 
