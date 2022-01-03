@@ -18,8 +18,11 @@ Note that while the filenames used here are about IP addresses, these scripts wi
 Here is the pipeline:
 
 scraper.py
+
     |
+
     V
+    
 ips_raw.txt
     |
     V
@@ -69,10 +72,3 @@ Captchas on hidden services are often much different from those you encounter in
 Anti-crawling measures will attempt to detect unusual traffic. If we are scraping a large website in one go, that may get red-flagged. One solution is to scrape the website in smaller chunks and combine them later using combine.py.
 
 Hidden services are by their very nature hard to find. For a threat intelligence researcher, it could be useful to have a sort of map of the hidden service landscape. This can be achieved with some extensions to spider.py. Given a starting point that is a sort of hub of hidden service links, such as a forum or a directory, the spider can be set to pull all .onion urls from the page. Then, the spider can go through each pulled url and repeat the process at each site. The spider can continue to repeat this process until there are no new urls to scrape. At that point you'll have a large amount of .onion urls. From there, it would be useful if the spider could do some basic classification based off the other elements on the pages to give a likely category to each .onion, such as marketplace or forum. This would give you a decent map of a certain subset of the hidden service landscape. Note that visiting certain hidden services may be illegal, so do this at your own risk. Right now it is purely an interesting though experiment for me.
-=======
----in dev, come back later---
-
-tor web crawler. given a starting .onion, will find all .onions on that page and recursively explore the new pages for more .onion links with the goal of making a map of hidden services. useful for threat intelligence research, among other things.
-
-usage: hdnspdr [starting .onion url] [options]
->>>>>>> 5409ecccfc08e847c57554c54fc398a1d9def4e2
